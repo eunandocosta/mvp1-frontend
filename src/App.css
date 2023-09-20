@@ -1,38 +1,206 @@
-.App {
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+body{
+  background-color: rgb(221, 229, 236);
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  gap: 10px;
+}
+
+.header{
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr) );
+  justify-items: center;
+  align-items: center;
+  border-bottom: 1px solid #38B6FF;
+  padding: 1rem;
+  background-color: #000B26;
+}
+
+.header>img{
+  width: 130px;
+}
+
+input{
+  width: fit-content;
+  height: fit-content;
+  outline: none;
+  border: 1px solid black;
+}
+
+.searchBar{
+  max-width: 30rem;
+  min-width: 20rem;
+  height: 2rem;
+  outline: none;
+}
+
+.ul_header{
+  display: flex;
+  color: #38B6FF;
+  list-style: none;
+  gap: 1rem;
+}
+
+.form{
+  display: grid;
+  width: 100%;
+  grid-template-rows: repeat(7, minmax(50px, 70px));
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.formGap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.submitLabel{
+  color: black;
+}
+
+.submitBtn{
+  background-color: transparent;
+  border: #38B6FF 1px solid;
+  color: black;
+  background-color: #38B6FF;
+  width: 8rem;
+  height: 2rem;
+  justify-self: center;
+  cursor: pointer;
+}
+
+.submitBtn:hover{
+  background-color: #38B6FF96;
+}
+
+.title{
+  color: #000B26;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.vitrine{
   display: flex;
   flex-direction: column;
+}
+
+.card{
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.1fr  0.2fr;
+  max-height: 200px;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  max-width: 50vw;
+  width: 50vw;
+  height: 200px;
+  border: #000b2600 1px solid;
+}
+
+@media screen and (max-width: 1000px) {
+  .card{
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 1fr 0.1fr 0.2fr;
+    max-height: 600px;
+    max-width: 200px;
+    height: 600px;
+  }
+}
+
+.card>img{
+  display: flex;
+  max-height: 200px;
+}
+
+.card:hover{
+  opacity: 90%;
+  border: #000b267c 1px solid;
+}
+
+.productValue{
+  font-size: 30px;
+}
+
+.productDescription{
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+}
+
+.buyBtn{
+  background-color: #38B6FF;
+  padding: 10px;
+  color: aliceblue;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.buyBtn:hover{
+  opacity: 90%;
+}
+
+.deleteButton{
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #ff3838;
 }
 
-.App-link {
-  color: #61dafb;
+.deleteButton:hover{
+  opacity: 80%;
+  cursor: pointer;
+}
+.estoqueButton{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.plusButton:hover, .minusButton:hover{
+  opacity: 80%;
+  cursor: pointer;
+}
+
+.plusButton{
+  background-color: #38B6FF;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.minusButton{
+  display: flex;
+  align-items: center;
+  background-color: #FFDE59;
+  height: 100%;
+  width: 100%;
+}
+
+.bottom{
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
 }
